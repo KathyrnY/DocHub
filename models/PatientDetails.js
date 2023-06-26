@@ -15,7 +15,9 @@ PatientDetails.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    address: {},
+    address: {
+      type: DataTypes.STRING,
+    },
     age: {
       type: DataTypes.INTEGER,
     },
@@ -27,6 +29,9 @@ PatientDetails.init(
     },
     occupation: {
       type: DataTypes.STRING,
+    },
+    apptdatetime: {
+      type: DataTypes.DATE,
     },
     doctor_id: {
       type: DataTypes.INTEGER,
