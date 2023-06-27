@@ -24,6 +24,10 @@ TestResults.init(
     patient_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'patientdetails',
+        key: 'id',
+      },
     },
   },
   {

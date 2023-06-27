@@ -48,6 +48,10 @@ PatientDetails.init(
     doctor_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {
