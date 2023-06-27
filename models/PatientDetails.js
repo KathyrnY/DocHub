@@ -11,11 +11,15 @@ PatientDetails.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    address: {
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    gender: {
       type: DataTypes.STRING,
     },
     age: {
@@ -25,20 +29,20 @@ PatientDetails.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    phoneno: {
-      type: DataTypes.INTEGER,
-    },
     insurancename: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    gender: {
-      type: DataTypes.STRING,
-    },
     occupation: {
       type: DataTypes.STRING,
     },
-    apptdatetime: {
+    street_address: {
+      type: DataTypes.STRING,
+    },
+    phoneno: {
+      type: DataTypes.INTEGER,
+    },
+    appt_date_time: {
       type: DataTypes.DATE,
     },
     doctor_id: {
