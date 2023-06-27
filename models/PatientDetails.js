@@ -43,7 +43,7 @@ PatientDetails.init(
       type: DataTypes.INTEGER,
     },
     appt_date_time: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
     },
     doctor_id: {
       type: DataTypes.INTEGER,
