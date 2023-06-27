@@ -22,7 +22,7 @@ HealthDetails.belongsTo(PatientDetails, {
   foreignKey: 'patient_id',
 });
 
-PatientDetails.hasMany(HealthDetailsEXt, {
+PatientDetails.hasMany(HealthDetailsEXT, {
   foreignKey: 'patient_id',
   onDelete: 'CASCADE',
 });
