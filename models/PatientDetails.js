@@ -21,8 +21,16 @@ PatientDetails.init(
     age: {
       type: DataTypes.INTEGER,
     },
+    race: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     phoneno: {
       type: DataTypes.INTEGER,
+    },
+    insurancename: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     gender: {
       type: DataTypes.STRING,
