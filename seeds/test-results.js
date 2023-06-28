@@ -1,4 +1,4 @@
-const { TestResults } = require("../models");
+const { TestResults } = require("../models/TestResults");
 
 const testData = [
     {
