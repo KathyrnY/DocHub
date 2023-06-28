@@ -15,7 +15,7 @@ HealthDetailsEXT.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    type: {
+    allergies: {
       type: DataTypes.INTEGER,
     },
     patient_id: {
