@@ -40,7 +40,7 @@ PatientDetails.init(
       type: DataTypes.STRING,
     },
     phoneno: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
     },
     appt_date_time: {
       type: DataTypes.DATEONLY,
