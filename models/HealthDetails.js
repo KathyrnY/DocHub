@@ -16,7 +16,7 @@ HealthDetails.init(
       allowNull: false,
     },
     evaluationandplan: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.TEXT,
     },
     prescriptiondetails: {
       type: DataTypes.TEXT,
