@@ -1,13 +1,17 @@
 const router = require('express').Router();
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const User = require('../../models/User');
 
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
+  try {
   res.render('login');
+  } catch (err) {
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 // Post route for login submission with added auth
-router.post('/login', async (req, res) => {
+ router.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
     const user = await User.findOne({ where: { username } });
