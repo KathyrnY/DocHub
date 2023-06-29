@@ -21,12 +21,18 @@ const healthData = [
     },
 ]
 const seedHealthDetails = async () => {
-    await HealthDetails.sync({ force: true });
-    try {
-      await Promise.all(healthData.map((data) => HealthDetails.create(data)));
-      console.log('Health Data Seeded!');
-    } catch (err) {
-      console.error('Error in seeding', err);
-    }
+  try {
+    await HealthDetails.bulkCreate(healthData);
+    console.log('Health Details were seeded!');
+  } catch (error) {
+    console.error('Error with seeding health details', error);
+  }
+    // await HealthDetails.sync({ force: true });
+    // try {
+    //   await Promise.all(healthData.map((data) => HealthDetails.create(data)));
+    //   console.log('Health Data Seeded!');
+    // } catch (err) {
+    //   console.error('Error in seeding', err);
+    // }
   };
-seedHealthDetails();
+module.exports = seedHealthDetails;

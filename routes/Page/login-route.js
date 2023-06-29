@@ -21,8 +21,10 @@ router.post('/login', async (req, res) => {
     if (!isPasswordValid) {
       return res.render('login', { error: 'Invalid username or password' });
     }
+// This will save the username and user id in the session
+    req.session.username = user.username;
+    req.session.userId = user.id;
 
-    req.session.user = user;
     res.redirect('/dashboard');
   } catch (err) {
     console.error(err);
