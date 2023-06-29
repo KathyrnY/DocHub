@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     //   'time_simple>>>',
     //   DateTime.now().toLocaleString(DateTime.TIME_SIMPLE)
     // );
-
+    
     const todayDate = DateTime.now().toFormat('yyyy-MM-dd');
     console.log(todayDate);
     const patientDetails = await PatientDetails.findAll({
