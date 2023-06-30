@@ -42,8 +42,11 @@ PatientDetails.init(
     phoneno: {
       type: DataTypes.STRING,
     },
-    appt_date_time: {
+    appt_date: {
       type: DataTypes.DATEONLY,
+    },
+    appt_time: {
+      type: DataTypes.TIME,
     },
     doctor_id: {
       type: DataTypes.INTEGER,
