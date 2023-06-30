@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const signupRoutes = require("./signup-route");
+const homePageroutes = require("./homePageroutes");
 
-router.use("/users",signupRoutes );
+router.use("/users",homePageroutes );
+
 
 module.exports = router;
