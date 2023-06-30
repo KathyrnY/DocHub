@@ -42,12 +42,23 @@ router.post('/login', async (req, res) => {
     }
     // This will save the username and user id in the session
     req.session.username = user.username;
-    req.session.userId = user.id;
+    req.session.user_id = user.dataValues.id;
 
     res.status(200).json({ message: 'You are now logged in!' });
   } catch (err) {
     console.error(err);
     res.status(500).send('Internal Server Error');
+  }
+});
+
+router.post('/logout', (req, res) => {
+  console.log('inside logout route');
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
 });
 
