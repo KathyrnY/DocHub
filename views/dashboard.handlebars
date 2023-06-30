@@ -4,5 +4,11 @@
 {{#each patientData as |PD|}}
 <div  class=" mx-auto mt-2 p-3" style="background-color:rgb(88, 84, 84); border:2px solid rgb(54, 53, 53); width:75%; border-radius:5px ">
    <h3> {{PD.first_name}} {{PD.last_name}}</h3>
+   <p>Time: {{PD.appttime}}</p>
 </div>
 {{/each}}
+
+<div>
+    <a href="#" id="logout">Logout</a>
+</div>
+ <script src="/js/dashboard.js"></script>

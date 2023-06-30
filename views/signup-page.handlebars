@@ -1,30 +1,59 @@
-<div class="card mx-auto w-50 mt-5" style="border:2px solid rgb(88, 84, 84)">
-<div class="card-header" style="background-color:rgb(88, 84, 84)">
-    Sign Up
-</div>
-<form class="card-body px-4 py-3 ">
-     <div class="mb-3">
-      <label for="first_name" class="form-label">first_name</label>
-      <input type="text" class="form-control" id="firstname" placeholder="username">
-    </div>
-     <div class="mb-3">
-      <label for="last_name" class="form-label">last_name</label>
-      <input type="text" class="form-control" id="lastname" placeholder="username">
-    </div>
-     <div class="mb-3">
-      <label for="email" class="form-label">email</label>
-      <input type="text" class="form-control" id="email" placeholder="username">
-    </div>
-    <div class="mb-3">
-      <label for="username" class="form-label">Username</label>
-      <input type="text" class="form-control" id="username" placeholder="username">
-    </div>
-    <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
-      <input type="password" class="form-control" id="password" placeholder="Password">
-    </div>
-    <button type="submit" class="btn btn-primary" style="background-color:rgb(88, 84, 84)">Submit</button>
-  </form>
-  </div>
+    <main class="main">
+      <section class="profile-image">
+        <img
+          src="/assets/DocHub+ (2).png"
+          id="profile-image"
+          alt="image of me"
+        />
+      </section>
+      <section>
+        <img src="/assets/DocHub+ (4).png" id="logoplus" />
+      </section>
 
-  <script src="./js/signup.js"></script>
+    <section class="vh-200 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5" style="height:60%">
+              <div class="card bg-dark text-white" style="border-radius: 1rem; width:max-content">
+                <div class="card-body p-5 text-center">
+      
+                  <div class="mb-md-5 mt-md-4 pb-5">
+      
+                    <h2 class="fw-bold mb-2 text-uppercase">SignUp</h2>
+                    <p class="text-white-50 mb-5">Please enter the details below</p>
+
+                    <div class="form-outline form-white mb-4">                     
+                      <label class="form-label" for="firstname">Firstname</label>
+                      <input type="text" id="firstname" class="form-control form-control-lg" />
+                    </div>
+
+                    <div class="form-outline form-white mb-4">                     
+                      <label class="form-label" for="lastname">Lastname</label>
+                      <input type="text" id="lastname" class="form-control form-control-lg" />
+                    </div>
+
+                    <div class="form-outline form-white mb-4">                     
+                      <label class="form-label" for="email">Email</label>
+                      <input type="email" id="email" class="form-control form-control-lg" />
+                    </div>
+      
+                    <div class="form-outline form-white mb-4">                     
+                      <label class="form-label" for="username">Username</label>
+                      <input type="text" id="username" class="form-control form-control-lg" />
+                    </div>
+      
+                    <div class="form-outline form-white mb-4">                    
+                      <label class="form-label" for="typePasswordX">Password</label>
+                       <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                    </div>
+                    
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Submit</button>    
+                  </div>          
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/signup.js"></script>
