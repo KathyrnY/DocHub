@@ -28,21 +28,29 @@ router.post('/', async (req, res) => {
 // Post route for login submission with added auth
 router.post('/login', async (req, res) => {
   try {
-    const { username, password } = req.body;
-    const user = await User.findOne({ where: { username } });
+    // const { username, password } = req.body;
+    const user = await User.findOne({ where: { username: req.body.username } });
 
     if (!user) {
-      return res.render('login', { error: 'Invalid username or password' });
+      return res.status(400).render({ error: 'Invalid username or password' });
     }
 
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    console.log('password>>>', req.body.password);
+    const isPasswordValid = await bcrypt.compare(
+      req.body.password,
+      user.password
+    );
 
+    console.log(isPasswordValid);
     if (!isPasswordValid) {
-      return res.render('login', { error: 'Invalid username or password' });
+      return res
+        .status(400)
+        .json({ error: 'Invalid username or password,passwordmismatch' });
     }
     // This will save the username and user id in the session
     req.session.username = user.username;
     req.session.user_id = user.dataValues.id;
+    req.session.loggedIn = true;
 
     res.status(200).json({ message: 'You are now logged in!' });
   } catch (err) {
