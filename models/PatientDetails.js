@@ -48,6 +48,9 @@ PatientDetails.init(
     appt_time: {
       type: DataTypes.TIME,
     },
+    comments:{
+      type: DataTypes.STRING,
+    },
     doctor_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
