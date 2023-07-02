@@ -78,131 +78,7 @@
                     <div class="col-md-7 col-lg-8 col-xl-9">
 
                         <div class="row row-grid">
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="card widget-profile pat-widget-profile">
-                                    <div class="card-body">
-                                        <div class="pro-widget-content">
-                                            <div class="profile-info-widget">
-                                                <a href="patient-profile.html" class="booking-doc-img">
-                                                    <img src="assets/img/patients/patient.jpg" alt="User Image">
-                                                </a>
-                                                <div class="profile-det-info">
-                                                    <h3><a href="patient-profile.html">Patient 1</a></h3>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="patient-info">
-                                            <ul>
-                                                <li>Phone <span>+1 952 001 8563</span></li>
-                                                <li>Age <span>38 Years, Male</span></li>
-                                                <li>Appointment time <span>11:00</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="card widget-profile pat-widget-profile">
-                                    <div class="card-body">
-                                        <div class="pro-widget-content">
-                                            <div class="profile-info-widget">
-                                                <a href="patient-profile.html" class="booking-doc-img">
-                                                    <img src="assets/img/patients/patient1.jpg" alt="User Image">
-                                                </a>
-                                                <div class="profile-det-info">
-                                                    <h3><a href="patient-profile.html">Patient 2</a></h3>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="patient-info">
-                                            <ul>
-                                                <li>Phone <span>+1 828 632 9170</span></li>
-                                                <li>Age <span>29 Years, Female</span></li>
-                                                <li>Appointment time <span>12:00</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="card widget-profile pat-widget-profile">
-                                    <div class="card-body">
-                                        <div class="pro-widget-content">
-                                            <div class="profile-info-widget">
-                                                <a href="patient-profile.html" class="booking-doc-img">
-                                                    <img src="assets/img/patients/patient2.jpg" alt="User Image">
-                                                </a>
-                                                <div class="profile-det-info">
-                                                    <h3><a href="patient-profile.html">Patient 3</a></h3>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="patient-info">
-                                            <ul>
-                                                <li>Phone <span>+1 207 729 9974</span></li>
-                                                <li>Age <span>23 Years, Male</span></li>
-                                                <li>Appointment time <span>8:00</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="card widget-profile pat-widget-profile">
-                                    <div class="card-body">
-                                        <div class="pro-widget-content">
-                                            <div class="profile-info-widget">
-                                                <a href="patient-profile.html" class="booking-doc-img">
-                                                    <img src="assets/img/patients/patient3.jpg" alt="User Image">
-                                                </a>
-                                                <div class="profile-det-info">
-                                                    <h3><a href="patient-profile.html">Patient 4</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="patient-info">
-                                            <ul>
-                                                <li>Phone <span>+1 260 724 7769</span></li>
-                                                <li>Age <span>32 Years, Male</span></li>
-                                                <li>Appointment time <span>11:30</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <div class="card widget-profile pat-widget-profile">
-                                    <div class="card-body">
-                                        <div class="pro-widget-content">
-                                            <div class="profile-info-widget">
-                                                <a href="patient-profile.html" class="booking-doc-img">
-                                                    <img src="assets/img/patients/patient4.jpg" alt="User Image">
-                                                </a>
-                                                <div class="profile-det-info">
-                                                    <h3><a href="patient-profile.html">Patient 5</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="patient-info">
-                                            <ul>
-                                                <li>Phone <span>+1 504 368 6874</span></li>
-                                                <li>Age <span>25 Years, Female</span></li>
-                                                <li>Appointment time <span>1:00</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                        {{#each patientData as |PD|}}
                             <div class="col-md-6 col-lg-4 col-xl-3">
                                 <div class="card widget-profile pat-widget-profile">
                                     <div class="card-body">
@@ -212,23 +88,21 @@
                                                     <img src="assets/img/patients/patient5.jpg" alt="User Image">
                                                 </a>
                                                 <div class="profile-det-info">
-                                                    <h3><a href="patient-profile.html">Patient 6</a></h3>
+                                                    <h3><a href="patient-profile.html">{{PD.first_name}} {{PD.last_name}}</a></h3>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="patient-info">
-                                            <ul>
-                                                <li>Phone <span>+1 954 820 7887</span></li>
-                                                <li>Age <span>25 Years, Female</span></li>
-                                                <li>Appointment time <span>3:45</span></li>
-                                            </ul>
+                                            <div class="patient-info">
+                                                <ul>
+                                                    <li>Age <span>{{PD.age}} Years, {{PD.gender}}</span></li>
+                                                    <li>Appointment time <span>{{PD.appttime}}</span></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
-                        </div>
+                        {{/each}}
 
                     </div>
                 </div>
@@ -363,8 +237,8 @@
 
 
 </body>
-
-
+<button type="button" id="newpatient">+ New Patient</button>
+<button type="button" id="allpatient">All My Patients</button>
 </html>
 <div>
     <a href="#" id="logout">Logout</a>
