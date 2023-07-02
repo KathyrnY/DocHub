@@ -27,12 +27,5 @@ const seedHealthDetails = async () => {
   } catch (error) {
     console.error('Error with seeding health details', error);
   }
-    // await HealthDetails.sync({ force: true });
-    // try {
-    //   await Promise.all(healthData.map((data) => HealthDetails.create(data)));
-    //   console.log('Health Data Seeded!');
-    // } catch (err) {
-    //   console.error('Error in seeding', err);
-    // }
   };
 module.exports = seedHealthDetails;

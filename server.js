@@ -22,7 +22,12 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({});
+const hbs = exphbs.create({
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true,
+  },
+});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
