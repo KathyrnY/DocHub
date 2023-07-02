@@ -34,4 +34,28 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/all', async (req, res) => {
+  try {
+    const patientDetails = await PatientDetails.findAll({
+      where: {
+        doctor_id: req.session.user_id,
+      },
+    });
+
+    const patientData = patientDetails.map((data) => data.get({ plain: true }));
+
+    patientData.forEach((data) => {
+      const dateinTformat = DateTime.fromISO(
+        `${data.appt_date}T${data.appt_time}`
+      );
+      const time = dateinTformat.toLocaleString(DateTime.TIME_SIMPLE);
+      data.appttime = time;
+    });
+
+    res.render('dashboard', { patientData });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 module.exports = router;
