@@ -3,6 +3,7 @@ const PatientDetails = require('./PatientDetails');
 const HealthDetails = require('./HealthDetails');
 const HealthDetailsEXT = require('./HealthDetailsEXT');
 const TestResults = require('./TestResults');
+const Comment = require('./Comments');
 
 User.hasMany(PatientDetails, {
   foreignKey: 'user_id',
@@ -39,6 +40,16 @@ PatientDetails.hasMany(TestResults, {
 TestResults.belongsTo(PatientDetails, {
   foreignKey: 'patient_id',
 });
+PatientDetails.hasMany(Comment, {
+  foreignKey: 'patientdetails_id',
+  as: 'patient_comments', 
+  onDelete: 'CASCADE',
+});
+
+Comment.belongsTo(PatientDetails, {
+  foreignKey: 'patientdetails_id',
+  as: 'patient', 
+});
 
 module.exports = {
   User,
@@ -46,4 +57,5 @@ module.exports = {
   HealthDetails,
   HealthDetailsEXT,
   TestResults,
+  Comment,
 };
