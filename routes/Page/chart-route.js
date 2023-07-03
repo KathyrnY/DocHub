@@ -26,7 +26,8 @@ router.get('/:id', async (req, res) => {
         healthExtData,
         healthData,
         testResultsData
-      });
+      
+    , style:'chart.css'});
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: 'Could not retrieve get route data ' });
