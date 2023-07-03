@@ -21,6 +21,10 @@ body {
     z-index: 3;
 }
 
+#profile-image{
+    margin-left:-300px;
+}
+
 #logoplus {
     height: 259px;
     position: relative;
@@ -48,4 +52,11 @@ body {
 
 .custom-field::after {
     content: attr(aria-label);
+}
+
+
+#form-box{
+    margin-left: -400px;
+    padding-right: 200px;
+    margin-top: -200px;
 }
