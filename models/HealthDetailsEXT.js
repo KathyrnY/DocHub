@@ -12,11 +12,10 @@ HealthDetailsEXT.init(
       autoIncrement: true,
     },
     condition: {
-      type: DataTypes.TEXT,
-      allowNull: false,
+      type: DataTypes.STRING,
     },
-    allergies: {
-      type: DataTypes.TEXT,
+    type: {
+      type: DataTypes.STRING,
     },
     patient_id: {
       type: DataTypes.INTEGER,
