@@ -13,7 +13,6 @@ HealthDetails.init(
     },
     progressnotes: {
       type: DataTypes.TEXT,
-      allowNull: false,
     },
     evaluationandplan: {
       type: DataTypes.TEXT,
