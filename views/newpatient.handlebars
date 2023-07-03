@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{!-- <link rel="stylesheet" href="/css/newpatient.css"> --}}
+    <title>New Patient</title>
+</head>
+<body>
+<div class="card" >
+  <h5 class="card-header" style="background-color:lightskyblue">New Patient Form</h5>
+ <div class="card-body">  
+ <form class=" mt-5 border border-dark rounded" >
+  <div class="form-group row mt-2">
+    <label for="first_name" class="col-1 col-form-label">First_name</label> 
+    <div class="col-3">
+      <input id="first_name" name="first_name" type="text" required="required" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="last_name" class="col-1 col-form-label">Last_name</label> 
+    <div class="col-3">
+      <input id="last_name" name="last_name" type="text" required="required" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-1">Gender</label> 
+    <div class="col-3">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="gender" id="radio_0" type="radio" class="custom-control-input" value="Male" required="required"> 
+        <label for="radio_0" class="custom-control-label">Male</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="gender" id="radio_1" type="radio" class="custom-control-input" value="Female" required="required"> 
+        <label for="radio_1" class="custom-control-label">Female</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="age" class="col-1 col-form-label">Age</label> 
+    <div class="col-3">
+      <input id="age" name="age" type="text" class="form-control" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="race" class="col-1 col-form-label">Race</label> 
+    <div class="col-3">
+      <input id="race" name="race" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="insurancename" class="col-1 col-form-label">Insurance Name</label> 
+    <div class="col-3">
+      <input id="insurancename" name="insurancename" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="occupation" class="col-1 col-form-label">Occupation</label> 
+    <div class="col-3">
+      <input id="occupation" name="occupation" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="address" class="col-1 col-form-label">Address</label> 
+    <div class="col-3">
+      <input id="address" name="address" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="phoneno" class="col-1 col-form-label">Phone-no</label> 
+    <div class="col-3">
+      <input id="phoneno" name="phoneno" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-1">Known Medical Conditions</label> 
+    <div class="col-3">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="knownconditions" id="knownconditions_0" type="checkbox" class="custom-control-input" value="Gastroenteritis"> 
+        <label for="knownconditions_0" class="custom-control-label">Gastroenteritis</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="knownconditions" id="knownconditions_1" type="checkbox" class="custom-control-input" value="Arthrities"> 
+        <label for="knownconditions_1" class="custom-control-label">Arthrities</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="knownconditions" id="knownconditions_2" type="checkbox" class="custom-control-input" value="Diabetes"> 
+        <label for="knownconditions_2" class="custom-control-label">Type 1 Diabetes</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="knownconditions" id="knownconditions_3" type="checkbox" class="custom-control-input" value="Chronicdiseases"> 
+        <label for="knownconditions_3" class="custom-control-label">Chronic diseases</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="knownconditions" id="knownconditions_4" type="checkbox" class="custom-control-input" value="Heart disease"> 
+        <label for="knownconditions_4" class="custom-control-label">Heart disease</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="knownconditions" id="knownconditions_4" type="checkbox" class="custom-control-input" value="Cancer"> 
+        <label for="knownconditions_4" class="custom-control-label">Cancer</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="knownconditions" id="knownconditions_5" type="checkbox" class="custom-control-input" value="None"> 
+        <label for="knownconditions_5" class="custom-control-label">None</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-1">Allergies</label> 
+    <div class="col-4">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="allergies" id="allergies_0" type="checkbox" class="custom-control-input" value="Sinusitis"> 
+        <label for="allergies_0" class="custom-control-label">Sinusitis</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="allergies" id="allergies_1" type="checkbox" class="custom-control-input" value="Drugallergy"> 
+        <label for="allergies_1" class="custom-control-label">Drug Allergy</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="allergies" id="allergies_2" type="checkbox" class="custom-control-input" value="Anaphylaxis"> 
+        <label for="allergies_2" class="custom-control-label">Anaphylaxis</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="allergies" id="allergies_3" type="checkbox" class="custom-control-input" value="Asthma"> 
+        <label for="allergies_3" class="custom-control-label">Asthma</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="allergies" id="allergies_4" type="checkbox" class="custom-control-input" value="Food Allergy"> 
+        <label for="allergies_4" class="custom-control-label">Food Allergy</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="allergies" id="allergies_5" type="checkbox" class="custom-control-input" value="Pet allergy"> 
+        <label for="allergies_5" class="custom-control-label">Pet allergy</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="allergies" id="allergies_6" type="checkbox" class="custom-control-input" value="Eosinophilic Esophagitis"> 
+        <label for="allergies_6" class="custom-control-label">Eosinophilic Esophagitis</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="allergies" id="allergies_7" type="checkbox" class="custom-control-input" value="None"> 
+        <label for="allergies_7" class="custom-control-label">None</label>
+      </div>
+    </div>
+  </div> 
+  <div class="form-group row">
+    <div class="offset-2 col-4">
+      <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+      <button name="submit" id='back' type="submit" class="btn btn-primary">Back</button>
+    </div>
+  </div>
+</form>
+</div> 
+</div>
+</body>
+<script src="/js/newpatient.js"></script>
+</html>

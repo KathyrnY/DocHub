@@ -4,7 +4,7 @@ const getAllpatient = async () => {
     headers: { 'Content-Type': 'application/json' },
   });
   if (response.ok) {
-    document.location.replace('/dashboard//all');
+    document.location.replace('/dashboard/all');
   } else {
     alert('Failed to get all patients.');
   }
@@ -23,5 +23,5 @@ const logout = async () => {
   }
 };
 
-document.querySelector('#logout').addEventListener('click', logout);
 document.querySelector('#allpatient').addEventListener('click', getAllpatient);
+document.querySelector('#logout').addEventListener('click', logout);
