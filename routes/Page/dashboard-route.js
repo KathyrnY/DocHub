@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
       data.appttime = time;
     });
 
-    res.render('dashboard', { patientData });
+    res.render('dashboard', { patientData, style: 'style.css' });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
