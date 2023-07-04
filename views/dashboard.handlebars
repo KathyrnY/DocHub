@@ -11,7 +11,7 @@
 
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/public/assets/style.css">
 
 
 
@@ -78,7 +78,7 @@
                     <div class="col-md-7 col-lg-8 col-xl-9">
 
                         <div class="row row-grid">
-                        {{#each patientData as |PD|}}
+                            {{#each patientData as |PD|}}
                             <div class="col-md-6 col-lg-4 col-xl-3">
                                 <div class="card widget-profile pat-widget-profile">
                                     <div class="card-body">
@@ -86,20 +86,21 @@
                                             <div class="profile-info-widget">
 
                                                 <div class="profile-det-info">
-                                                    <h3><a href="patient-profile.html">{{PD.first_name}} {{PD.last_name}}</a></h3>
+                                                    <h3><a href="patient-profile.html">{{PD.first_name}}
+                                                            {{PD.last_name}}</a></h3>
                                                 </div>
                                             </div>
                                         </div>
-                                            <div class="patient-info">
-                                                <ul>
-                                                    <li>Age <span>{{PD.age}} Years, {{PD.gender}}</span></li>
-                                                    <li>Appointment time <span>{{PD.appttime}}</span></li>
-                                                </ul>
-                                            </div>
+                                        <div class="patient-info">
+                                            <ul>
+                                                <li>Age <span>{{PD.age}} Years, {{PD.gender}}</span></li>
+                                                <li>Appointment time <span>{{PD.appttime}}</span></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         {{/each}}
 
                     </div>
@@ -236,7 +237,8 @@
 
 </body>
 <a href="/dashboard/new">+ New Patient</button>
-<button type="button" id="allpatient">All My Patients</button>
+    <button type="button" id="allpatient">All My Patients</button>
+
 </html>
 <div>
     <a href="#" id="logout">Logout</a>
