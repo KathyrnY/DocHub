@@ -1,6 +1,22 @@
 const submitbtn = document.querySelector('[type=submit]');
 const backbtn = document.querySelector('#back');
 
+function ckChange(ckType) {
+  var checkboxes = document.getElementsByName('knownconditions');
+  if (ckType.name === 'allergies') {
+    var checkboxes = document.getElementsByName('allergies');
+  }
+
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (ckType.checked && ckType.value === 'None') {
+      checkboxes[i].disabled = true;
+      ckType.disabled = false;
+    } else {
+      checkboxes[i].disabled = false;
+    }
+  }
+}
+
 const submitForm = async (event) => {
   event.preventDefault();
 
