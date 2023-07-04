@@ -41,13 +41,13 @@ TestResults.belongsTo(PatientDetails, {
   foreignKey: 'patient_id',
 });
 PatientDetails.hasMany(Comment, {
-  foreignKey: 'patientdetails_id',
+  foreignKey: 'patient_id',
   as: 'patient_comments', 
   onDelete: 'CASCADE',
 });
 
 Comment.belongsTo(PatientDetails, {
-  foreignKey: 'patientdetails_id',
+  foreignKey: 'patient_id',
   as: 'patient', 
 });
 

@@ -3,7 +3,7 @@ const PatientDetails = require('../../models/PatientDetails');
 const HealthDetailsEXT = require('../../models/HealthDetailsEXT');
 const HealthDetails = require('../../models/HealthDetails');
 const TestResults = require('../../models/TestResults');
-// const Comment = require('../../models/Comments');
+const Comment = require('../../models/Comments');
 
 router.get('/:id', async (req, res) => {
     try {
@@ -12,22 +12,30 @@ router.get('/:id', async (req, res) => {
         { model: HealthDetailsEXT},
         { model: HealthDetails},
         { model: TestResults},
-
+        {
+          model: Comment,
+          as: 'patient_comments',
+          order: [['createdAt', 'DESC']],
+          limit: 1,
+        },
         ]
       });
       const healthExtData = chartData.get({ plain: true });
       const healthData = chartData.get({ plain: true });
       const testResultsData = chartData.get({ plain: true });
+      const commentData = chartData.get({plain: true});
 
       console.log('Health Details Ext:', healthExtData);
       console.log('Health Details:', healthData);
       console.log('Text Results:', testResultsData);
+      console.log('Comment:', commentData );
       res.render('chart', {
         healthExtData,
         healthData,
-        testResultsData
+        testResultsData,
+        commentData,
       
-    , style:'chart.css'});
+     style:'chart.css'});
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: 'Could not retrieve get route data ' });
