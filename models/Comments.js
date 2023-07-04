@@ -23,7 +23,7 @@ Comment.init(
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
     },
-    patientdetails_id: {
+    patient_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {

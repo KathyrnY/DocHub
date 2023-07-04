@@ -1,23 +1,20 @@
 const router = require('express').Router();
-const { PatientDetails, Comment } = require('../../models');
+const Comment = require('../../models/Comments');
 
-router.post('/comments', async (req, res) => {
-  try {
-    const { comment_text, patientdetails_id } = req.body;
+router.post('/comments/:id', async (req, res) => {
+try {
+  const { comment_text } = req.body;
 
-    const newComment = await Comment.create({
-      comment_text,
-      patientdetails_id,
-    });
+  const newComment = await Comment.create({
+    comment_text,
+    patient_id: req.params.id,
+  });
 
-    const patientDetails = await PatientDetails.findByPk(req.params.id);
-    patientDetails.comments.push(newComment);
-
-    res.status(200).json({ success: true, message: 'Comment saved successfully' });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json({ success: false, error: 'Server error' });
-  }
+  res.status(200).json(newComment);
+} catch (error) {
+  console.error(error);
+  res.status(500).json({ message: 'Internal server error, cannot post comment' });
+}
 });
 
 module.exports = router;

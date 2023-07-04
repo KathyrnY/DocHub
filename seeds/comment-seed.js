@@ -5,11 +5,11 @@ const seedComments = async () => {
     const commentsData = [
       {
         comment_text: 'Test for patient 1',
-        patientdetails_id: 1,
+        patient_id: 1,
       },
       {
         comment_text: 'Test for patient 2',
-        patientdetails_id: 2, 
+        patient_id: 2, 
       },
     ];
 
