@@ -1,0 +1,33 @@
+
+.body{
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    place-content: center;
+    flex-direction: column;
+}
+
+.card{
+    display: flex;
+    margin-top: 109px;
+    width: auto;
+    border-color: navy;
+    border-width: thick;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#comment{
+    margin-top: 12px;
+    width: 150px;
+}
+
+#newappt{
+    margin-top: 12px;
+    width: 150px;
+
+}
+
+.container{
+    margin-left: -13px;
+}
