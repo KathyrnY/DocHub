@@ -9,7 +9,6 @@ const getAllpatient = async () => {
     alert('Failed to get all patients.');
   }
 };
-
 const logout = async () => {
   const response = await fetch('/api/users/logout', {
     method: 'POST',

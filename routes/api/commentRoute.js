@@ -23,10 +23,6 @@ router.post('/comments/:id', async (req, res) => {
 router.put('/appt', async (req, res) => {
   console.log(req.body);
   try {
-    // const todayDate = DateTime.now().toFormat('yyyy-MM-dd');
-    // if (req.body.date >= todayDate) {
-    //   console.log('yes greater!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-    // }
     const newAppt = await PatientDetails.update(
       {
         appt_date: req.body.date,
