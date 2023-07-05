@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+  {{!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> --}}
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
    <link rel="stylesheet" href="/css/chart.css"/>
     <link rel="stylesheet" href="/css/date-picker.css" />
 <title>Patient Chart</title>
 </head>
 <body class="body">
-
+    <div class="breadcrumb-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-12 col-12">
+                        <img src="/assets/DocHub+ (6).png"/>
+                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<main class="mainbody">
+        
 {{!-- {{#each patientDetails}} --}}
 <div class="card">
   {{!-- {{} chartData as |patientDetails|}} --}}
@@ -84,7 +98,7 @@
   </button>
   
   <button type="button" class="btn btn-primary"  id="newappt" data-bs-toggle="modal" data-bs-target="#apptModal">
-    + Add New Appointment
+    + New Appointment
   </button>
 
   <!-- Modal -->
@@ -118,7 +132,7 @@
         </div>
         <div class="modal-body">
          <form action="/action_page.php">
-            <label for="time">Choose ur Appt date and time</label>
+            <label for="time">Choose Your Appt date and time</label>
             <input type="text" class="date-picker" id="date" />
             <select id="time" name="time">
               <option value="8:00">8:00</option>
@@ -162,5 +176,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="/js/patientchart.js"></script>
   <script src="/js/date-picker.js"></script>
+</main>
 </body>
 </html>
