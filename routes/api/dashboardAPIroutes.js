@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { PatientDetails, HealthDetailsEXT } = require('../../models');
 
+//CREATES New Patient Info
 router.post('/', async (req, res) => {
   try {
     const patientDetails = await PatientDetails.create({

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { PatientDetails, Comment } = require('../../models');
-const { DateTime } = require('luxon');
 
+// creates comments for that visit
 router.post('/comments/:id', async (req, res) => {
   try {
     const { comment_text } = req.body;
@@ -20,8 +20,8 @@ router.post('/comments/:id', async (req, res) => {
   }
 });
 
+//creates new appointment for the patient
 router.put('/appt', async (req, res) => {
-  console.log(req.body);
   try {
     const newAppt = await PatientDetails.update(
       {

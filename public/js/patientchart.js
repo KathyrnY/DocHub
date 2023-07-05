@@ -34,7 +34,6 @@ const calendarfn = async (event) => {
   const time = document.querySelector('#time').value;
   const timeformatted = `${time}:00`;
   const id = window.location.pathname.split('/').pop();
-  console.log(date, timeformatted);
 
   const response = await fetch('/api/chart/appt', {
     method: 'PUT',
