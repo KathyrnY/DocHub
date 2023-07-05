@@ -1,7 +1,13 @@
 const router = require('express').Router();
 const { Op } = require('sequelize');
 const { DateTime } = require('luxon');
-const PatientDetails = require('../../models/PatientDetails');
+const {
+  PatientDetails,
+  HealthDetailsEXT,
+  HealthDetails,
+  TestResults,
+  Comment,
+} = require('../../models');
 
 //Displays doctor's dashboard with upcoming patients
 router.get('/', async (req, res) => {
@@ -34,6 +40,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//displays all patient details
 router.get('/all', async (req, res) => {
   try {
     const patientDetails = await PatientDetails.findAll({
@@ -58,6 +65,42 @@ router.get('/all', async (req, res) => {
   }
 });
 
+//displays individual patient details
+router.get('/chart/:id', async (req, res) => {
+  try {
+    const chartData = await PatientDetails.findByPk(req.params.id, {
+      include: [
+        { model: HealthDetailsEXT },
+        { model: HealthDetails },
+        { model: TestResults },
+        {
+          model: Comment,
+          as: 'patient_comments',
+          order: [['createdAt', 'DESC']],
+          limit: 1,
+        },
+      ],
+    });
+    const healthExtData = chartData.get({ plain: true });
+    const healthData = chartData.get({ plain: true });
+    const testResultsData = chartData.get({ plain: true });
+    const commentData = chartData.get({ plain: true });
+
+    res.render('chart', {
+      healthExtData,
+      healthData,
+      testResultsData,
+      commentData,
+
+      style: 'chart.css',
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Could not retrieve get route data ' });
+  }
+});
+
+//displays new patient form
 router.get('/new', (req, res) => {
   try {
     res.render('newpatient');
