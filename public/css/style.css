@@ -1457,3 +1457,39 @@ Patient Profile
 		}
 	}
 }
+
+/* my css */
+
+.profile-sidebar{
+    border:none;
+    border-bottom:none;
+    width:281px;
+}
+
+#bull{
+    background-color: whitesmoke;
+    border:none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 6px;
+    margin-top:-90px;
+    list-style-type: none;
+}
+
+.nav-links {
+    display: flex;
+    padding: 19px;
+    list-style-type: none;
+}
+
+.navbar li a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    background-color: none;
+    padding: 15px;
+}
