@@ -29,17 +29,21 @@
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-md-12 col-12">
-                        <img src="./assets/DocHub+ (6).png"/>
+                        <img src="/assets/DocHub+ (6).png"/>
                         <nav class="navbar">
                             <ul class="nav-links">
+{{!-- waiting for anu to send changes that allow links to be clicked but think this is how to get my patient in nav bar --}}
+
+                                <li class="nav-tiem"><a href="" id="allpatient">My Patients</li>
+
                                 <li class="nav-item" ><a href="/dashboard/new">+ New Patient</button></li>
                                 <li class="nav-item"><a href="#" id="logout">Logout</a></li>
                             </ul>
                         </nav>
 
     
-                        <h2 class="breadcrumb-title">Patient Portal</h2>
-                        <button type="button" id="allpatient">All My Patients</button>
+                        <h2 class="breadcrumb-title">Welcome,</h2>
+                        {{!-- <button type="button" id="allpatient">All My Patients</button> --}}
                         
                         </div>
                     </div>
@@ -116,9 +120,9 @@
 
 </body>
 {{!-- <a href="/dashboard/new">+ New Patient</button> --}}
-    <button type="button" id="allpatient">All My Patients</button>
+    {{!-- <button type="button" id="allpatient">All My Patients</button> --}}
 
 {{!-- <div>
     <a href="#" id="logout">Logout</a>
 </div> --}}
-<script src="/public/js/dashboard.js"></script>
+<script src="/js/dashboard.js"></script>
