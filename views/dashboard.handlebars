@@ -9,7 +9,7 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="/css/style.css">
 
-
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
@@ -18,58 +18,91 @@
     <img src="./assets/DocHub+ (6).png"/>
 </header> -->
 
-    <div class="main-wrapper">
 
+<div class="main-wrapper">
         
-        <!-- /Header -->
-
-        <!-- Breadcrumb -->
-        <div class="breadcrumb-bar">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-md-12 col-12">
-                        <img src="/assets/DocHub+ (6).png"/>
-                        <nav class="navbar">
-                            <ul class="nav-links">
-                                <li class="nav-item" ><a href="/dashboard/new">+ New Patient</button></li>
-                                 <li class="nav-tiem"><a href="" id="allpatient">My Patients</li>
-                                  <li class="nav-tiem"><a href="/dashboard" >Upcoming appointments</li>
-                                <li class="nav-item"><a href="#" id="logout">Logout</a></li>
-                            </ul>
-                        </nav>
-                      
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- attempt -->
+    <div class="mybar">
+        <div class="logo_content">
+        <div class="logo">
+            <i class='bx bx-plus-medical'></i>
+        <div class="logo_name">DocHub</div>
         </div>
+        <i class='bx bx-menu' id="btnmenu"></i>
+        
+        </div>
+        
+        <ul class="nav_list">
+        <li>
+        <a href="#">
+            <i class='bx bxs-dashboard' ></i>
+        <span class="links_name">Dashbaord</span>
+        </a>
+        <!-- <span class="tool_tips">Dashbaord</span> -->
+        </li>
+        <li>
+            <a href="#" id="allpatient">
+                <i class='bx bx-folder-open' ></i>
+            <span class="links_name">My Patients</span>
+            </a>
+            <!-- <span class="tool_tips">All Patients</span> -->
+            </li>
+
+            <li>
+                <a href="/dashboard">
+                    <i class='bx bx-calendar' ></i>
+                <span class="links_name">Upcoming Visits</span>
+                </a>
+                <!-- <span class="tool_tips">All Patients</span> -->
+                </li>
+            <li>
+                <a href="/dashboard/new">
+                    <i class='bx bx-folder-plus' ></i>
+                <span class="links_name">+ New Patient</span>
+                </a>
+                <!-- <span class="tool_tips">Add New Patient</span> -->
+            </li>
+
+            <li>
+                <a href="#" id="logout">
+                    <i class='bx bx-log-out-circle' id="log_out"></i>
+                                    <span class="links_name">Log Out</span>
+                                </a>
+                                    <!-- <span class="tool_tips">Log Out</span> -->
+            </li>
+        </ul>
+        <!-- <div class="profile_content">
+    <a href="#">
+        <i class='bx bx-log-out-circle' id="logout"></i>
+                        <span class="links_name">Log Out</span>
+                    </a>
+                        <span class="tool_tips">Log Out</span> -->
+    </div>
+<div class="home_content">
+
+    <!-- anoterh attempt -->
+
+    <main class="main">
+        <section class="profile-image">
+          <img
+            src="./assets/DocHub+ (2).png"
+            id="profile-image"
+            alt="image of me"
+          />
+        </section>
+        <section>
+          <img src="assets/DocHub+ (4).png" id="logoplus" />
+        </section>
+      </main>
+
+</div>
+    
+
+</div>
 
 
 
-
-
-        <!-- Page Content -->
-        <div class="content">
-            <div class="container-fluid">
-
-                <div class="row">
-                    <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
-
-                        <div class="profile-sidebar">
-                            <div class="widget-profile pro-widget-content" id="bull">
-                                <div class="profile-info-widget">
-                            
-                                    <div class="profile-det-info">
-                                        <h3>Doctor's name</h3>
-                
-                                        <div class="patient-details">
-                                            <h5 class="mb-0">MDS - Oral Surgery</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                    </div>
+   {{!-- leave for now --}}
                     <div class="col-md-7 col-lg-8 col-xl-9">
 
                         <div class="row row-grid">
@@ -107,6 +140,19 @@
         <!-- /Page Content -->
 
     </div>
+
+    <script>
+let btnmenu = document.querySelector("#btnmenu");
+let mybar = document.querySelector(".mybar");
+
+mybar.onclick= function(){
+    mybar.classList.toggle("active");
+}
+
+
+
+
+</script>
 
 <script src="/js/dashboard.js"></script>
 
