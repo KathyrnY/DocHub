@@ -161,7 +161,6 @@ function SetDate(Obj) {
     const month = new Date(
       `${window.Months[window.Month]} 01 2000`
     ).toLocaleDateString(`en`, { month: `2-digit` });
-    console.log(month);
     window.DateObject.value =
       window.Year.toString() + '-' + month + '-' + Obj.innerHTML.toString();
     ClearDatePicker();

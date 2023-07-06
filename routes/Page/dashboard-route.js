@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
       data.appttime = time;
     });
 
-    res.render('dashboard', { patientData,});
+    res.render('dashboard', { patientData });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -59,7 +59,8 @@ router.get('/all', async (req, res) => {
       data.appttime = time;
     });
 
-    res.render('dashboard', { patientData});} catch (err) {
+    res.render('dashboard', { patientData });
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
