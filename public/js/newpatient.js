@@ -75,7 +75,7 @@ const submitForm = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.location.replace('/dashboard/all');
     } else {
       alert('Failed to create Patientdetails');
     }
