@@ -8,9 +8,10 @@ const {
   TestResults,
   Comment,
 } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //Displays doctor's dashboard with upcoming patients
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const todayDate = DateTime.now().toFormat('yyyy-MM-dd');
     const currentTime = DateTime.now().toLocaleString(
@@ -41,7 +42,7 @@ router.get('/', async (req, res) => {
 });
 
 //displays all patient details
-router.get('/all', async (req, res) => {
+router.get('/all', withAuth, async (req, res) => {
   try {
     const patientDetails = await PatientDetails.findAll({
       where: {
@@ -67,7 +68,7 @@ router.get('/all', async (req, res) => {
 });
 
 //displays individual patient details
-router.get('/chart/:id', async (req, res) => {
+router.get('/chart/:id', withAuth, async (req, res) => {
   try {
     const chartData = await PatientDetails.findByPk(req.params.id, {
       include: [
@@ -102,7 +103,7 @@ router.get('/chart/:id', async (req, res) => {
 });
 
 //displays new patient form
-router.get('/new', (req, res) => {
+router.get('/new', withAuth, (req, res) => {
   try {
     res.render('newpatient');
   } catch (err) {
