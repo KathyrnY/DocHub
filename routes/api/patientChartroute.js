@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { PatientDetails, Comment } = require('../../models');
+const { DateTime } = require('luxon');
 
 // creates comments for that visit
 router.post('/comments/:id', async (req, res) => {
@@ -34,10 +35,9 @@ router.put('/appt', async (req, res) => {
         },
       }
     );
-
     res.status(200).json(newAppt);
   } catch (error) {
-    console.error(error);
+    console.log(error);
     res
       .status(500)
       .json({ message: 'Internal server error, cannot update appointment' });
