@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { PatientDetails, HealthDetailsEXT } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //CREATES New Patient Info
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const patientDetails = await PatientDetails.create({
       first_name: req.body.firstName,
