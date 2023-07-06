@@ -7,6 +7,21 @@ const healthDataExt = [
     patient_id: 1,
   },
   {
+    condition: 'Asthma',
+    type: 'allergies',
+    patient_id: 1,
+  },
+  {
+    condition: 'Pet allergy',
+    type: 'allergies',
+    patient_id: 1,
+  },
+  {
+    condition: 'Arthrities',
+    type: 'knowncondition',
+    patient_id: 1,
+  },
+  {
     condition: 'Type 2 Diabetes',
     type: 'knowncondition',
     patient_id: 2,
