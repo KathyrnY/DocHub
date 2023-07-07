@@ -24,6 +24,7 @@ The Doc Hub app is a convenient and user-friendly application that streamlines t
 * [License](#license)
 
 ## Visual 
+[Untitled_ Jul 6, 2023 8_48 PM.webm](https://github.com/KathyrnY/DocHub/assets/127566404/5d73ab5a-40b0-4ae7-b14f-23936a1effb1)
 
 ## Link 
 
