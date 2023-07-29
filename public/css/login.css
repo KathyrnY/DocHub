@@ -1,57 +1,67 @@
 body {
-    background-image: url(https://img.freepik.com/free-photo/flat-lay-health-still-life-arrangement-with-copy-space_23-2148854064.jpg?w=1060&t=st=1687833341~exp=1687833941~hmac=2ce044ad886bcbd9e1c4c47aa9597fc31dfe19f41c648c73fa34a61bd09237ba);
-    no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
-.main {
-    display: flex;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #15558d
 }
 
-#main {
-    display: flex;
+#login,
+#signup {
+  padding: 1rem 0;
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-image {
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 3;
-}
-
-#profile-image{
-    margin-left:-300px;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 3;
 }
 
 #logoplus {
-    height: 259px;
-    position: relative;
-    margin-top: 414px;
-    margin-left: -766px;
-    z-index: 2;
-    transform: scale(1);
-    animation: pulse 2s infinite;
+  height: 259px;
+  position: relative;
+  margin-top: 414px;
+  margin-left: -766px;
+  z-index: 2;
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(.95);
-        z-index: 2;
-    }
-    70% {
-        transform: scale(1.1);
-        z-index: 2;
-    }
-    100% {
-        transform: scale(.95);
-        z-index: 2;
-    }
+  0% {
+    transform: scale(.95);
+    z-index: 2;
+  }
+
+  70% {
+    transform: scale(1.1);
+    z-index: 2;
+  }
+
+  100% {
+    transform: scale(.95);
+    z-index: 2;
+  }
 }
 
 .custom-field::after {
-    content: attr(aria-label);
+  content: attr(aria-label);
 }
 
 
