@@ -1,379 +1,368 @@
-
-
 /*-----------------
 	 mis styles
 -----------------------*/
 
 .breadcrumb-bar {
-	background-color: #15558d;
-	padding: 15px 0;
+  background-color: #15558d;
+  padding: 15px 0;
 }
 
 .breadcrumb-bar .breadcrumb-title {
-	color: #fff;
-	font-size: 22px;
-	font-weight: 700;
-	margin: 5px 0 0;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 5px 0 0;
 }
 
 .page-breadcrumb ol {
-	background-color: transparent;
-	font-size: 12px;
-	margin-bottom: 0;
-	padding: 0;
+  background-color: transparent;
+  font-size: 12px;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .page-breadcrumb ol li a {
-	color: #fff;
+  color: #fff;
 }
 
 .page-breadcrumb ol li.active {
-	color: #fff;
+  color: #fff;
 }
 
 .page-breadcrumb .breadcrumb-item+.breadcrumb-item:before {
-	color: #fff;
-	font-size: 10px;
+  color: #fff;
+  font-size: 10px;
 }
-
 
 
 /* my css */
 
-.profile-sidebar{
-    border:none;
-    border-bottom:none;
-    width:281px;
+.profile-sidebar {
+  border: none;
+  border-bottom: none;
+  width: 281px;
 }
 
-#bull{
-    background-color: whitesmoke;
-    border:none;
+#bull {
+  background-color: whitesmoke;
+  border: none;
 }
 
-.navbar{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 6px;
-    margin-top:-90px;
-    list-style-type: none;
+.navbar-padding {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 5rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-padding {
+    padding: 3rem;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 6px;
+  margin-top: -90px;
+  list-style-type: none;
 }
 
 .nav-links {
-    display: flex;
-    padding: 19px;
-    list-style-type: none;
+  display: flex;
+  padding: 19px;
+  list-style-type: none;
 }
 
-.navbar li a{
-    list-style-type: none;
-    text-decoration: none;
-    color: white;
-    background-color: none;
-    padding: 15px;
+.navbar li a {
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  background-color: none;
+  padding: 15px;
 }
 
-
-
-/* newest changes */
-body{
-    background-image: url(https://img.freepik.com/free-photo/flat-lay-health-still-life-arrangement-with-copy-space_23-2148854064.jpg?w=1060&t=st=1687833341~exp=1687833941~hmac=2ce044ad886bcbd9e1c4c47aa9597fc31dfe19f41c648c73fa34a61bd09237ba);
-    no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+ul.nav_list {
+  list-style: none;
+  padding: 0 0.5rem 0 0.5rem;
 }
 
-ul.nav_list{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    list-style-type: none;
-    padding-inline-start: 10px;
+.nav_list li {
+  margin-bottom: 0.25rem;
 }
 
-.mybar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 78px;
-    background-color: #15558d;
-    padding: 6px 14px;
-    transition: all 0.5s ease;
+.mybar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4rem;
+  background-color: #15558d;
+  transition: all 0.5s ease;
+  z-index: 10;
 }
 
-.mybar.active{
-    width: 240px;
+.mybar.active {
+  width: 240px;
 }
 
-.mybar .logo_content .logo{
-    color:#fff;
-    display: flex;
-    height: 50px;
-    width: 100%;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s ease;
+.mybar.active .logo_content {
+  padding-left: 1rem;
 }
 
-.mybar.active .logo_content .logo{
-    opacity: 1;
-    pointer-events: none;
+.mybar .logo_content .logo {
+  color: #fff;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
 }
 
-.logo_content .logo i{
-    font-size: 28px;
-    margin-right: 5px;
+.mybar.active .logo_content .logo {
+  opacity: 1;
+  pointer-events: none;
 }
 
-.logo_content .logo .logo_name{
-    font-size: 31px;
-    font-weight: 400;
+.logo_content .logo i {
+  font-size: 28px;
+  margin-right: 5px;
 }
 
-.mybar #btnmenu{
-    position:absolute;
-    color:white;
-    left:50%;
-    top:6px;
-    font-size: 20px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    transform: translateX(-50%);
+.logo_content .logo .logo_name {
+  font-size: 31px;
+  font-weight: 400;
 }
 
-.mybar.active #btnmenu{
-    left:90%
-}
-.mybar ul{
-    margin-top:20px;
-}
-
-.mybar ul li{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin: 0 5 px;
-    list-style: none;
-    line-height: 50px;
+.mybar #btnmenu {
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 6px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
 }
 
-.mybar ul li a{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0.4s ease;
-    border-radius: 12px;
-    white-space: nowrap;
+.mybar.active #btnmenu {
+  left: 90%
 }
 
-
-
-.mybar ul li a:hover{
-    color: #15558d;
-    background: #fff;
-
-}
-.mybar ul li a i{
-    height: 50px;
-    min-width: 50px;
-    border-radius: 12px;
-    line-height: 50px;
-    text-align: center;
+.mybar ul {
+  margin-top: 20px;
 }
 
-.mybar .links_name{
-    opacity: 0;
-    pointer-events: none;
+.mybar ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border-radius: 12px;
+  white-space: nowrap;
 }
 
-.mybar.active .links_name{
-    opacity: 1;
-    pointer-events: auto;
+.mybar ul li a:hover {
+  color: #15558d;
+  background: #fff;
+}
+
+.mybar ul li a i {
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.mybar .links_name {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mybar.active .links_name {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 
 /* more stuff */
 
-.main{
-    display: flex;
-    margin-top: -200px;
+.main {
+  display: flex;
+  margin-top: -200px;
 }
 
-#main{
-    display: flex;
-    position: sticky;
+#main {
+  display: flex;
+  position: sticky;
 }
 
-.profile-image{
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 3;
+.profile-image {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 3;
 }
 
 
 #logoplus {
-    height: 259px;
-    position:relative;
-    margin-top: 414px;
-    margin-left: -766px;
-    z-index: 2;
-   
-transform: scale(1);
-animation: pulse 2s infinite;
+  height: 259px;
+  position: relative;
+  margin-top: 414px;
+  margin-left: -766px;
+  z-index: 2;
+
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
 
 
 @keyframes pulse {
-0% {
+  0% {
     transform: scale(.95);
     z-index: 2;
-}
+  }
 
-70% {
+  70% {
     transform: scale(1.1);
     z-index: 2;
-    
-}
 
-100% {
+  }
+
+  100% {
     transform: scale(.95);
- z-index: 2;
-}
-}
-
-.custom-field::after{
-    content:attr(aria-label);
+    z-index: 2;
+  }
 }
 
-.mybar .profile_content{
-    position: absolute;
-    color: #fff;
-    bottom: 0;
-    left:0;
-    width: 100%;
+.custom-field::after {
+  content: attr(aria-label);
+}
+
+.mybar .profile_content {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
 }
 
-.profile #log_out{
-    position: absolute;
-    left:50%;
-    bottom:5px;
-    transform: translateX(-50%);
-    min-width: 50px;
-    line-height: 50px;
-    font-size: 20px;
-    border-radius: 12px;
-    text-align: center;
-    transition: all 0.4s ease;
-    background:#fff;}
-
-.mybar.active .profile #log_out{
-    background: none;
+.profile #log_out {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  background: #fff;
 }
 
-.mybar.active .profile #log_out{
-    left:88%;
+.mybar.active .profile #log_out {
+  background: none;
+}
+
+.mybar.active .profile #log_out {
+  left: 88%;
 }
 
 
 
-.home_content{
-    display: flex;
-    position: sticky;
-    z-index: -2;
-    height:100%;
-    left: 78px;
-    width: calc(100%-78px);
-    transition: all 0.5s ease;
+.home_content {
+  display: flex;
+  position: sticky;
+  z-index: -2;
+  height: 100%;
+  left: 78px;
+  width: calc(100%-78px);
+  transition: all 0.5s ease;
 }
 
-.mybar ul li .tooltip{
-    position: absolute;
-    height:35px;
-    left: 122px;
-    top: 50px;
-    transform: translate(-50%,-50%);
-    border-radius: 6px;
-    line-height: 35px;
-    text-align: center;
-    width: 122px;
-    background: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    transition: 0s;
-    opacity: 0;
-    pointer-events: none;
-    display: block;
+.mybar ul li .tooltip {
+  position: absolute;
+  height: 35px;
+  left: 122px;
+  top: 50px;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  line-height: 35px;
+  text-align: center;
+  width: 122px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
 }
 
-.mybar.active ul li .tooltip{
-    display: none;
+.mybar.active ul li .tooltip {
+  display: none;
 }
 
-.mybar ul li:hover .tooltip{
-    top:50%;
-    opacity: 1;
-    transition:all 0.5s ease;
+.mybar ul li:hover .tooltip {
+  top: 50%;
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 
-.mybar.active ~ .home_content{
-    width: calc(100%-240px);
-    left:240px;
+.mybar.active~.home_content {
+  width: calc(100%-240px);
+  left: 240px;
 }
 
 
 /* working on the card */
 
-.allcards{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-inline-start: 278px;
-    margin-right: -232px;
-    margin-top: 34px;
+.allcards {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.onecard{
-    background: whitesmoke;
-    width: 280px;
-    height: 154px;
-    padding: 12px;
-    margin: 10px;
-    border-radius: 15px;
+.onecard {
+  background: whitesmoke;
+  width: 280px;
+  height: 154px;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 15px;
 }
 
-.profile-det-info{
-    margin-top: 5px;
-    margin-bottom: 20px;
+.profile-det-info {
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
 
-.profile-det-info a{
-    color: #15558d;
-    text-decoration: none;
+.profile-det-info a {
+  color: #15558d;
+  text-decoration: none;
 }
 
-.patient-info ul li{
-list-style-type: none;
+.patient-info ul li {
+  list-style-type: none;
 }
 
-.onecard:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    /* transition: all .5s ease; */
+.onecard:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  /* transition: all .5s ease; */
 }
 
 
-.allcards.move{
-    left:200px;
+.allcards.move {
+  left: 200px;
 }
 
-.main-wrapper{
-    display: flex;
+.main-wrapper {
+  display: flex;
 }

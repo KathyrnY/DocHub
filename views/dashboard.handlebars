@@ -1,139 +1,23 @@
-<head>
-    <meta charset="utf-8">
-    <title>DocHub</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-
-    <!-- Bootstrap CSS -->
-
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-</head>
-
-<body>
-<!-- <header class="header">
-    <img src="./assets/DocHub+ (6).png"/>
-</header> -->
-
-
-<div>
-        
-    <!-- attempt -->
-    <div class="mybar">
-        <div class="logo_content">
-        <div class="logo">
-            <i class='bx bx-plus-medical'></i>
-        <div class="logo_name">DocHub</div>
+{{> sidenav}}
+<div class="container navbar-padding">
+  <h1>My Patients</h1>
+  <div class="row">
+    {{#each patientData as |PD|}}
+    <div class="col-12 col-md-4 col-lg-3 mb-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{PD.first_name}} {{PD.last_name}}</h5>
+          <p class="card-text">
+            Age {{PD.age}} Years, {{PD.gender}}
+            <br />
+            Appointment Time: {{PD.appttime}}
+          </p>
+          </p>
+          <a class="btn btn-primary" href="/dashboard/chart/{{PD.id}}">Get Info</a>
         </div>
-        <i class='bx bx-menu' id="btnmenu"></i>
-        
-        </div>
-        
-        <ul class="nav_list">
-        {{!-- <li>
-        <a href="#">
-            <i class='bx bxs-dashboard' ></i>
-        <span class="links_name">Dashbaord</span>
-        </a>
-        <!-- <span class="tool_tips">Dashbaord</span> -->
-        </li> --}}
-        <li>
-            <a href="#" id="allpatient">
-                <i class='bx bx-folder-open' ></i>
-            <span class="links_name">My Patients</span>
-            </a>
-            <!-- <span class="tool_tips">All Patients</span> -->
-            </li>
-
-            <li>
-                <a href="/dashboard">
-                    <i class='bx bx-calendar' ></i>
-                <span class="links_name">Upcoming Visits</span>
-                </a>
-                <!-- <span class="tool_tips">All Patients</span> -->
-                </li>
-            <li>
-                <a href="/dashboard/new">
-                    <i class='bx bx-folder-plus' ></i>
-                <span class="links_name">+ New Patient</span>
-                </a>
-                <!-- <span class="tool_tips">Add New Patient</span> -->
-            </li>
-
-            <li>
-                <a href="#" id="logout">
-                    <i class='bx bx-log-out-circle' id="log_out"></i>
-                                    <span class="links_name">Log Out</span>
-                                </a>
-                                    <!-- <span class="tool_tips">Log Out</span> -->
-            </li>
-        </ul>
-        <!-- <div class="profile_content">
-    <a href="#">
-        <i class='bx bx-log-out-circle' id="logout"></i>
-                        <span class="links_name">Log Out</span>
-                    </a>
-                        <span class="tool_tips">Log Out</span> -->
+      </div>
     </div>
-
-
-    <!-- anoterh attempt -->
-
-    {{!-- <main class="main">
-        <section class="profile-image">
-          <img
-            src="./assets/DocHub+ (2).png"
-            id="profile-image"
-            alt="image of me"
-          />
-        </section>
-        <section>
-          <img src="assets/DocHub+ (4).png" id="logoplus" />
-        </section>
-      </main> --}}
-
-
-{{!-- HERE --}}
-{{!-- </div> --}}
-    
-
-
-
-
-   {{!-- leave for now --}}
-     <div class="main-wrapper">               
-                            {{#each patientData as |PD|}}
-<section class="allcards">
-    <div class="onecard">
-        <div class="profile-det-info">
-            <h3><a href="/dashboard/chart/{{PD.id}}">{{PD.first_name}}
-                    {{PD.last_name}}</a></h3>
-        </div>
-        <div class="patient-info">
-            <ul>
-                <li>Age <span>{{PD.age}} Years, {{PD.gender}}</span></li>
-                <li>Appointment time: {{PD.appttime}}</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-                        {{/each}}
-
-     </div>
-
-<script>
-    let btnmenu = document.querySelector("#btnmenu");
-    let mybar = document.querySelector(".mybar");
-
-    mybar.onclick= function(){
-    mybar.classList.toggle("active");
-    }
-</script>
-
+    {{/each}}
+  </div>
+</div>
 <script src="/js/dashboard.js"></script>
-
-</body>

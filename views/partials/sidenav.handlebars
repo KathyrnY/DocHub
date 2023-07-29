@@ -1,0 +1,48 @@
+<div class="mybar">
+  <div class="logo_content">
+    <div class="logo">
+      <i class='bx bx-plus-medical'></i>
+      <div class="logo_name">DocHub</div>
+    </div>
+    <i class='bx bx-menu' id="btnmenu"></i>
+  </div>
+  <ul class="nav_list">
+    <li>
+      <a href="/dashboard/all" id="allpatient">
+        <i class='bx bx-folder-open'></i>
+        <span class="links_name">My Patients</span>
+      </a>
+    </li>
+    <li>
+      <a href="/dashboard/upcoming">
+        <i class='bx bx-calendar'></i>
+        <span class="links_name">Upcoming Visits</span>
+      </a>
+    </li>
+    <li>
+      <a href="/dashboard/new">
+        <i class='bx bx-folder-plus'></i>
+        <span class="links_name">+ New Patient</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" id="logout">
+        <i class='bx bx-log-out-circle' id="log_out"></i>
+        <span class="links_name">Log Out</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<script>
+  let sideNav = document.querySelector(".mybar");
+  sideNav.onclick = function (e) {
+    console.log(e.target);
+    const target = event.target;
+    const isListItem = target.closest(".mybar li") !== null;
+    // Check if the click was on a list item or outside
+    if (!isListItem) {
+      sideNav.classList.toggle("active");
+    }
+  }
+</script>
