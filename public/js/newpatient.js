@@ -84,9 +84,5 @@ const submitForm = async (event) => {
   }
 };
 
-const backtodashboard = () => {
-  document.location.replace('/dashboard');
-};
 
 submitbtn.addEventListener('click', submitForm);
-backbtn.addEventListener('click', backtodashboard);
