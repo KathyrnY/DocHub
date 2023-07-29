@@ -111,4 +111,12 @@ router.get('/new', withAuth, (req, res) => {
   }
 });
 
+router.get('/upcoming', withAuth, (req, res) => {
+    try {
+    res.render('upcoming');
+  } catch (err) {
+    res.status(500).send('Internal Server Error');
+  }
+})
+
 module.exports = router;
