@@ -1,69 +1,62 @@
-
-.mainbody{
-    margin-left: 200px;
-    margin-right: 200px;
-    display: flex;
-    place-content: center;
-    flex-direction: column;
+.mainbody {
+  margin-left: 200px;
+  margin-right: 200px;
+  display: flex;
+  place-content: center;
+  flex-direction: column;
 }
 
-.card{
-    display: flex;
-    margin-top: 35px;
-    width: auto;
-    border-color: navy;
-    border-width: thick;
-    flex-wrap: wrap;
-    flex-direction: row;
+#comment {
+  margin-top: 12px;
+  width: 150px;
 }
 
-#comment{
-    margin-top: 12px;
-    width: 150px;
+#newappt {
+  margin-top: 12px;
+  width: 184px;
 }
 
-#newappt{
-    margin-top: 12px;
-    width: 184px;
-
+.patient-data {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.container{
-    margin-left: -13px;
+@media (min-width: 768px) {
+  .patient-data {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-
 
 /* just added */
 
 .breadcrumb-bar {
-	background-color: #15558d;
-	padding: 15px 0;
+  background-color: #15558d;
+  padding: 15px 0;
 }
 
 .breadcrumb-bar .breadcrumb-title {
-	color: #fff;
-	font-size: 22px;
-	font-weight: 700;
-	margin: 5px 0 0;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 5px 0 0;
 }
 
 .page-breadcrumb ol {
-	background-color: transparent;
-	font-size: 12px;
-	margin-bottom: 0;
-	padding: 0;
+  background-color: transparent;
+  font-size: 12px;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .page-breadcrumb ol li a {
-	color: #fff;
+  color: #fff;
 }
 
 .page-breadcrumb ol li.active {
-	color: #fff;
+  color: #fff;
 }
 
 .page-breadcrumb .breadcrumb-item+.breadcrumb-item:before {
-	color: #fff;
-	font-size: 10px;
+  color: #fff;
+  font-size: 10px;
 }
